@@ -107,7 +107,7 @@ class File:
     def __init__(self, filename, probefile=None, save_binary=True, no_load=False):
         self._absolute_filename = op.abspath(filename)
         self._fname = op.split(filename)[-1]
-        self._absolute_foldername = op.split(filename)[0]
+        self._absolute_foldername = op.split(self._absolute_filename)[0]
         self._channel_info = dict()
         self._channel_groups_dirty = True
 
